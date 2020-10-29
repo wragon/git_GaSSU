@@ -1,0 +1,95 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="03_map1.css">
+    <script src="https://code.jquery.com/jquery-3.4.1.js"></script>
+    <title>Document</title>
+</head>
+<body>
+    <div class="container">
+        <header class="row">
+            <div class="profile-image-box">
+                <img src="soonsil.jpg" alt="Profile Loge Image" class="profile-image">
+            </div>
+            <div class="search">
+                <form>
+                    <fieldset>
+                        <input type="search" />
+                        <button class ="search-button" type="submit">
+                            <i class="fa fa-search"></i>
+                        </button>
+                    </fieldset>
+                </form>
+            </div>
+            <div class="gassu-login">
+                <button class="login" type="button">Login</button>
+            </div>
+        </header>
+        <br>
+        <br>
+        <hr>
+        <br>
+        <div>
+            <div class="place-title">
+                <h1 class="title">서울 탐방</h1>
+                <button type="button" class="btn_like">
+                    <span class="img_emoti">좋아요</span>
+                    <span class="ani_heart_m"></span>
+                </button>
+                <!--jQuery-->
+                <script>
+                    $('button').click(function(){
+                        if($(this).hasClass('btn_unlike')){
+                            $(this).removeClass('btn_unlike');
+                            $('.ani_heart_m').removeClass('hi');
+                            $('.ani_heart_m').addClass('bye');
+                        }
+                        else{
+                            $(this).addClass('btn_unlike');
+                            $('.ani_heart_m').addClass('hi');
+                            $('.ani_heart_m').removeClass('bye');
+                        }
+                    });
+                </script>
+            </div>
+            <div class="place-picture">
+                <img src="cambodia1.jpg" alt="Place-picture1" class="photo place-picture" width="595", height="400">
+                <img src="cambodia2.jpg" alt="Place-picture2" class="photo place-picture" width="300", height="200">
+                <img src="cambodia3.jpg" alt="Place-picture3" class="photo place-picture3" width="300", height="200">
+            </div>
+        </div>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <br>
+        <div class="good-place">
+            <h2 class="title2">명소</h2>
+            <div class="good-place-picture">
+                <img src="arsnal2.jpg" alt="Place-picture1" class="good-picture">
+                <button type="button" class="btn_like">
+                    <span class="img_emoti">좋아요</span>
+                    <span class="ani_heart_m"></span>
+                </button>
+            </div>
+        </div>
+        <div class="food-place">
+            <h2 class="title2">장소</h2>
+            <div class="good-place-picture">
+                <img src="chelsea.jpg" alt="Place-picture1" class="good-picture">
+                <button type="button" class="btn_like">
+                    <span class="img_emoti">좋아요</span>
+                    <span class="ani_heart_m"></span>
+                </button>
+            </div>
+        </div>
+        <footer>
+            <p class="finish">@GaSSU</p>
+        </footer>
+    </div>
+</body>
+</html>
