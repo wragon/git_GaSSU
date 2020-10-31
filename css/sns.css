@@ -157,10 +157,10 @@ body {
   -webkit-box-orient: vertical;
   -webkit-box-direction: normal;
           flex-direction: column;
-  background: #F6F8FF;
+  background: white;
 }
 body .heart-switch {
-  margin: 12px 0;
+  margin: 3px 0;
 }
 body .dribbble {
   position: fixed;
@@ -202,7 +202,6 @@ body .twitter svg {
 }
 
 .content { 
-  border: gray 2px solid;
   border-radius: 15px;
   padding: 25px;
   margin-top: 5px;
@@ -211,7 +210,7 @@ body .twitter svg {
   right: 0;
   bottom: 0;
   left: 0;
-  background-color: #e3e3e3;
+  background-color: #F6F8FF;
 }
 
 /*중간넓이*/
