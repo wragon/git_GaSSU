@@ -1,0 +1,114 @@
+/***** FONT SETTINGS ******/
+
+  
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 0 50px 0;
+  }
+  .square {
+    margin-left: 2%;
+    margin-right: 2%;
+    margin-bottom: 2%;
+    position: relative;
+    width: 405px;
+    height: 495px;
+  }
+  
+  .content { 
+    padding: 25px;
+    margin-top: 5px;
+    height: auto;
+    top: 50%;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    background-color: lightgoldenrodyellow;
+  }
+
+.picture {
+    width: 350px; 
+    height: 350px;        
+}
+
+.heart-txt {
+    padding-top: 15px; 
+    width: 350px; 
+    height: 90px; 
+    display: table; 
+    overflow: hidden;  
+    display: flex;
+}
+
+.searchbox {
+  position: relative;
+  width: 50%; /* 원하는 너비 */
+}
+
+.searchbox:before {
+  content: "";
+  display: block;
+  padding-top: 50%; /*가로에 대한 세로의 비율*/
+  background-image: url('../images/travelplace.jpg');
+  background-repeat : no-repeat;
+	background-size : cover;
+
+}
+
+.searchboxcontent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.deepblue {
+  background-color: #263343;
+}
+
+.mint {
+  background-color: #31BFBF;
+}
+  
+  /*중간넓이*/
+  
+  @media screen and (min-width: 620px) {
+
+    .picture {
+        width: 350px; 
+        height: 350px;        
+    }
+    
+    .heart-txt {
+        padding-top: 15px; 
+        width: 350px; 
+        height: 90px; 
+        display: table; 
+        overflow: hidden;  
+        display: flex;
+    }
+
+  }
+  
+  
+  /*넓을때*/
+  
+  @media screen and (min-width: 760px) {
+      
+    .picture {
+        width: 350px; 
+        height: 350px;        
+    }
+    
+    .heart-txt {
+        padding-top: 15px; 
+        width: 350px; 
+        height: 90px; 
+        display: table; 
+        overflow: hidden;  
+        display: flex;
+    }
+  }
+  
