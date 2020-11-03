@@ -1,0 +1,171 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>myplaces</title>
+    <link rel="stylesheet" href="./grid.css">
+    <link rel="stylesheet" href="./main.css">
+    <link rel="stylesheet" href="./heart-twitter/style.css">
+    <link href="http://fonts.googleapis.com/css?family=Roboto:400,100" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="./heart-twitter/js_code.js"></script>
+    <script>
+        $(document).ready(function () {
+
+            $('body').on("click", '.heart_animation_Class', function () {
+                var A = $(this).attr("id");
+                var B = A.split("like");
+                var messageID = B[1];
+                var C = parseInt($("#count_For_Like" + messageID).html());
+                $(this).css("background-position", "")
+                var D = $(this).attr("rel");
+
+                if (D === 'like') {
+                    $("#count_For_Like" + messageID).html(C + 1);
+                    $(this).addClass("heartAnimation").attr("rel", "unlike");
+
+                }
+                else {
+                    $("#count_For_Like" + messageID).html(C - 1);
+                    $(this).removeClass("heartAnimation").attr("rel", "like");
+                    $(this).css("background-position", "left");
+                }
+            });
+        });
+    </script>
+  </head>
+
+  <body>
+
+    <header>
+               
+    </header>
+
+    <div class="container">
+
+      
+
+        <div class="row">
+            <div><p><h2> GaSSU </h2></p></div>
+            <img src='KakaoTalk_20201029_000916433.png' style="width: 10%; height: 7%;">
+        </div>
+
+        <div class="searchbox" style="width: 100%;"> 
+            <div class="searchboxcontent">
+                <div style="text-align: center; margin-top: 23%;">
+                    <input onkeyup="filter()" type="text" id="value" placeholder="어디로 떠나볼까요?" style="width: 50%; height: 30px;">
+                    <button style="height: 40px; width: 60px;"><b>Go!</b></button>
+                </div>
+            </div> 
+        </div>
+
+        <div class="row">
+          <div><p><h2> Top 4 </h2></p></div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-3">
+                <img src="travelplace.jpg" style="width: 90%; padding: 5%;">
+            </div>
+            <div class="col-3">
+                <img src="travelplace.jpg" style="width: 90%; padding: 5%;">
+            </div>
+            <div class="col-3">
+                <img src="travelplace.jpg" style="width: 90%; padding: 5%;">
+            </div>
+            <div class="col-3">
+                <img src="travelplace.jpg" style="width: 90%; padding: 5%;">
+            </div>
+        </div>
+
+        <div class="row">
+            <div><p><h2>SNS</h2></p></div>
+        </div>
+        
+        <div style="margin-top: 40px; text-align: center; border: black 2px solid;" class="container">
+            <div class="square" style="position: relative; display: inline-block;" >
+                <div class="content">
+                    <div style="height: 90%;">
+                        <img src="./2.jpg" class="picture">
+                    </div>
+                    <div class="heart-txt">
+                        <div style="flex:1;">
+                            <div class="heart_animation_Class " id="like" rel="like"></div>
+                        </div>                       
+                        <div style=" flex:8">
+                            <p style="display: table-cell; vertical-align:middle;">장소에대한설명들</p>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+    
+            <div class="square" style="position: relative; display: inline-block;" >
+                <div class="content">
+                    <div style="height: 90%;">
+                        <img src="./2.jpg" class="picture">
+                    </div>
+                    <div class="heart-txt">
+                        <div style="flex:1">
+                            <div class="heart_animation_Class " id="like" rel="like"></div>
+                        </div>                       
+                        <div style=" flex:8">
+                            <p style="display: table-cell; vertical-align:middle;">장소에대한설명들</p>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+    
+            <div class="square" style="position: relative; display: inline-block;" >
+                <div class="content">
+                    <div style="height: 90%;">
+                        <img src="./2.jpg" class="picture">
+                    </div>
+                    <div class="heart-txt" >
+                        <div style="flex:1">
+                            <div class="heart_animation_Class " id="like" rel="like"></div>
+                        </div>                       
+                        <div style=" flex:8">
+                            <p style="display: table-cell; vertical-align:middle;">장소에대한설명들</p>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+    
+            <div class="square" style="position: relative; display: inline-block;" >
+                <div class="content">
+                    <div style="height: 90%;">
+                        <img src="./2.jpg" class="picture">
+                    </div>
+                    <div class="heart-txt" >
+                        <div style="flex:1">
+                            <div class="heart_animation_Class " id="like" rel="like"></div>
+                        </div>                       
+                        <div style=" flex:8">
+                            <p style="display: table-cell; vertical-align:middle;">장소에대한설명들</p>
+                        </div>
+                    </div>
+    
+                </div>
+            </div>
+    
+            
+    
+        </div>
+          
+
+
+    </div> <!-- container close-->
+      
+
+      <!-- Footer -->
+      <footer>
+        <p>&copy; 2020 Kim HyeBin</p>
+      </footer>
+
+  </body>
+
+</html>
