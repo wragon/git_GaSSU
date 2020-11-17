@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>write</title>
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/mainhome.css">
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/mainhome.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/heart-twitter/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="main.js" defer></script>
+    <script src="https://kit.fontawesome.com/5814eb1b1f.js" crossorigin="anonymous"></script>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id"
+        content="281467534903-0u5uv24suvn9c2kr8e3ahonjm7qtlq3a.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+  </head>
+
+  <body>
+    <nav class="navbar">
+      <div class="navbar_logo" style="margin-right: 50px;" >
+          <i class="fas fa-paper-plane"></i>
+          <a class="name" href="">GaSSU</a>
+      </div>
+      <ul class="navbar_menu">
+        <li><a href="">Place</a></li>
+        <li><a href="">Social</a></li>
+        <li><a href="">Route</a></li>
+        <li><a href="">MyPage</a></li>
+    </ul>
+
+    <ul class="navbar_icons">
+        <li><i class="fab fa-facebook"></i></li>
+        <li><i class="fab fa-instagram"></i></li>
+        <div style="height: 36%; margin-left: 350px;" class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+        <script>
+            function onSignIn(googleUser) {
+                // Useful data for your client-side scripts:
+                var profile = googleUser.getBasicProfile();
+                console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+                console.log('Full Name: ' + profile.getName());
+                console.log('Given Name: ' + profile.getGivenName());
+                console.log('Family Name: ' + profile.getFamilyName());
+                console.log("Image URL: " + profile.getImageUrl());
+                console.log("Email: " + profile.getEmail());
+
+                // The ID token you need to pass to your backend:
+                var id_token = googleUser.getAuthResponse().id_token;
+                console.log("ID Token: " + id_token);
+            }
+        </script>
+    </ul>
+
+      <a href="#" class="navbar_toogleBtn">
+          <i class="fas fa-bars"></i>
+      </a>
+
+  </nav>
+
+    <div class="container">
+
+        <script> function setThumbnail(event) {
+            for (var image of event.target.files) {
+                var reader = new FileReader(); 
+                reader.onload = function(event) { 
+                    var img = document.createElement("img"); 
+                    img.setAttribute("src", event.target.result); 
+                    document.querySelector("div#image_container").appendChild(img); 
+                };
+                console.log(image);
+                reader.readAsDataURL(image);
+            }
+        } </script>
+
+        <form method="post" action="" onsubmit="return confirm('포스팅을 완료하시겠습니까?');" style="text-align: center;"> <!-- action 에 서버주소 입력 -->
+            제목 :
+            <input type="text" name="post-name" style="width: 80%;" required>
+            <br>
+            <hr>
+            <div id="image_container"></div>
+            <input type="file" name="reviewImg" id="image" accept="image/png, image/jpeg" onchange="setThumbnail(event);" multiple required/>
+            <br>
+            <hr>
+            
+            <textarea id="box" name="box" placeholder="장소에 대한 설명을 입력해주세요." style="width: 100%; height: 300px; overflow: auto; resize: vertical;" required></textarea>
+            <hr>
+            <br>
+            <input type="submit" value="포스팅하기">
+        
+        </form>
+
+    </div> <!-- container close-->
+      
+
+      <!-- Footer -->
+      <footer style="text-align: center;">
+        <p>&copy; 2020 GaSSU</p>
+      </footer>
+
+  </body>
+
+</html>

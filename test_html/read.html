@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id"
+        content="281467534903-0u5uv24suvn9c2kr8e3ahonjm7qtlq3a.apps.googleusercontent.com">
+    
+    <title>read</title>
+    <link rel="stylesheet" href="../css/grid.css">
+    <link rel="stylesheet" href="../css/mainhome.css">
+    <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/heart-twitter/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="main.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/5814eb1b1f.js" crossorigin="anonymous"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <style media="screen">
+        *{
+          margin: 0; padding: 0;
+        }
+        .slide{
+          width: 300px;
+          height: 300px;
+          overflow: hidden;
+          position: relative;
+          left: 0;
+        }
+        .slide ul{
+          width: 1500px;
+          position: absolute;
+          top:0;
+          left:0;
+          font-size: 0;
+        }
+        .slide ul li{
+          display: inline-block;
+        }
+        #back{
+          position: absolute;
+          top: 100px;
+          left: 0;
+          cursor: pointer;
+          z-index: 1;
+        }
+        #next{
+          position: absolute;
+          top: 100px;
+          right: 0;
+          cursor: pointer;
+          z-index: 1;
+        }
+        
+    </style>
+
+  </head>
+
+  <body>
+
+    <nav class="navbar">
+        <div class="navbar_logo" style="margin-right: 50px;" >
+            <i class="fas fa-paper-plane"></i>
+            <a class="name" href="">GaSSU</a>
+        </div>
+        <ul class="navbar_menu">
+            <li><a href="">Place</a></li>
+            <li><a href="">Social</a></li>
+            <li><a href="">Route</a></li>
+            <li><a href="">MyPage</a></li>
+        </ul>
+
+        <ul class="navbar_icons">
+            <li><i class="fab fa-facebook"></i></li>
+            <li><i class="fab fa-instagram"></i></li>
+            <div style="height: 36%; margin-left: 350px;" class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+            <script>
+                function onSignIn(googleUser) {
+                    // Useful data for your client-side scripts:
+                    var profile = googleUser.getBasicProfile();
+                    console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+                    console.log('Full Name: ' + profile.getName());
+                    console.log('Given Name: ' + profile.getGivenName());
+                    console.log('Family Name: ' + profile.getFamilyName());
+                    console.log("Image URL: " + profile.getImageUrl());
+                    console.log("Email: " + profile.getEmail());
+
+                    // The ID token you need to pass to your backend:
+                    var id_token = googleUser.getAuthResponse().id_token;
+                    console.log("ID Token: " + id_token);
+                }
+            </script>
+        </ul>
+  
+        <a href="#" class="navbar_toogleBtn">
+            <i class="fas fa-bars"></i>
+        </a>
+  
+    </nav>
+
+    <div class="container" style="display: flex;">
+
+        <div style="width: 400px;">
+
+            <div class="slide" style="width: 300px; height: 300px; display: flex; justify-content: center; align-items: center;">
+                <img id="back" src="../images/back.png" alt="" width="100">
+                <ul>
+                    <li><img src="../images/name1.jpg" alt="" style="width:300px; height:auto;"></li>
+                    <li><img src="../images/name2.jpg" alt="" style="width:300px; height:auto;"></li>
+                    <li><img src="../images/name3.jpg" alt="" style="width:300px; height:auto;"></li>
+                    <li><img src="../images/name4.jpg" alt="" style="width:300px; height:auto;"></li>
+                    <li><img src="../images/name5.jpg" alt="" style="width:300px; height:auto;"></li>
+                </ul>
+                <img id="next" src="../images/next.png" alt="" width="100">
+                </div>
+        
+        
+                <div style="width: 300px; height: 500px; overflow:auto; ">
+                <p>
+                    서얼 며엉 <br> fdsf<br>sd<br>sf<br>esf<br>ezef<br>ezf<br><br><br><br><br><br>fasdfsadf<br>asfsfsdf<br><br><br><br><br><br><br><br><br><br><br><br>end<br><br><br>
+                </p>
+                </div>
+        
+                <script type="text/javascript">
+                    $(document).ready(function(){
+                        var imgs;
+                        var img_count;
+                        var img_position = 1;
+            
+                        imgs = $(".slide ul");
+                        img_count = imgs.children().length;
+            
+                        //버튼을 클릭했을 때 함수 실행
+                        $('#back').click(function () {
+                            back();
+                        });
+                        $('#next').click(function () {
+                            next();
+                        });
+            
+                        function back() {
+                            if(1<img_position){
+                            imgs.animate({
+                                left:'+=300px'
+                            });
+                            img_position--;
+                            }
+                        }
+                        function next() {
+                            if(img_count>img_position){
+                            imgs.animate({
+                                left:'-=300px'
+                            });
+                            img_position++;
+                            }
+                        }
+                    });
+                </script>
+        
+        </div>
+        
+        <div style="width: 500px; height: 800px;">
+            <div style="height: 70px;">
+                <h1>댓글</h1><br>
+            </div>
+            <div style=" height: 730px; overflow : auto;">
+                <div style="height: 100px; border: solid black; margin-bottom: 10px;">
+                    <p>
+                        ID : 00000000
+                        <hr>
+                    </p>
+                </div>
+                <div style="height: 100px;  border: solid black; margin-bottom: 10px;">
+                    <p>
+                        ID : 00000000
+                        <hr>
+                    </p>
+                </div>
+                <div style="height: 100px;  border: solid black; margin-bottom: 10px;">
+                    <p>
+                        ID : 00000000
+                        <hr>
+                    </p>
+                </div>
+                <div style="height: 100px;  border: solid black; margin-bottom: 10px;">
+                    <p>
+                        ID : 00000000
+                        <hr>
+                    </p>
+                </div>
+                <div style="height: 100px;  border: solid black; margin-bottom: 10px;">
+                    <p>
+                        ID : 00000000
+                        <hr>
+                    </p>
+                </div>
+                <div style="height: 100px;  border: solid black; margin-bottom: 10px;">
+                    <p>
+                        ID : 00000000
+                        <hr>
+                    </p>
+                </div>
+                <div style="height: 100px;  border: solid black; margin-bottom: 10px;">
+                    <p>
+                        ID : 00000000
+                        <hr>
+                    </p>
+                </div>
+                <div style="height: 100px;  border: solid black; margin-bottom: 10px;">
+                    <p>
+                        ID : 00000000
+                        <hr>
+                    </p>
+                </div>
+
+            </div>
+            
+        </div>
+
+    </div> <!-- container close-->
+      
+
+      <!-- Footer -->
+      <footer style="text-align: center;">
+        <p>&copy; 2020 GaSSU</p>
+      </footer>
+
+  </body>
+
+</html>
