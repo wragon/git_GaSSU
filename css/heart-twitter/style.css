@@ -2,13 +2,11 @@
     background: url(images/web_heart_animation.png);
     background-position: left;
     background-repeat: no-repeat;
-    height: 10%;
+    height: 30%;
     width: 20%;
     cursor: pointer;
     position: absolute;
-    left:0%;
     background-size:2900%;
-    margin-top: -3%;
 }
 .heart:hover, .heart:focus{
 	background-position: right;
@@ -28,14 +26,7 @@
     background-position: right;
 }
 }
-h1 {
-	color:blue;
-	font-family:cursive;
-}
-h3 {
-	color:red;
-	font-family:cursive;
-}
+
 .heartAnimation {
  display: inline-block;
  -webkit-animation-name: heartBlast;
