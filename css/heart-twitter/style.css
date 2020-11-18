@@ -8,6 +8,18 @@
     position: absolute;
     background-size:2900%;
 }
+.heart_animation_Other {
+    background: url(images/web_heart_animation.png);
+    background-position: left;
+    background-repeat: no-repeat;
+    height: 30%;
+    width: 20%;
+    cursor: pointer;
+    position: absolute;
+    right: 5px; 
+    bottom: 5px;
+    background-size:2900%;
+}
 .heart:hover, .heart:focus{
 	background-position: right;
 }

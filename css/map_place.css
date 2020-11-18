@@ -7,13 +7,38 @@
   }  
 
   /*place*/
+  .place-title{
+    height: 165px;
+  }
   .title{
     font-size: 60px;
     float:left;
   }
-
-  .place-picture{
+  .place-picture1{
     float:left;
+    background-image: url('../images/name3.jpg');
+    background-position: center;
+    width:590px;
+    height:400px;
+    margin-left: 1px;
+    position: relative;
+  }
+  .place-picture2{
+    float:right;
+    background-image: url('../images/name4.jpg');
+    background-position: center;
+    width:306px;
+    height:198px;
+    position: relative;
+  }
+  .place-picture3{
+    float:right;
+    margin-top: 4px;
+    background-image: url('../images/name5.jpg');
+    background-position: center;
+    width:306px;
+    height:198px;
+    position: relative;
   }
 
   /*명소*/

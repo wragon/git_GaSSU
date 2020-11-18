@@ -38,6 +38,25 @@
                     $(this).css("background-position", "left");
                 }
             });
+            $('body').on("click", '.heart_animation_Other', function () {
+                var A = $(this).attr("id");
+                var B = A.split("like");
+                var messageID = B[1];
+                var C = parseInt($("#count_For_Like" + messageID).html());
+                $(this).css("background-position", "")
+                var D = $(this).attr("rel");
+
+                if (D === 'like') {
+                    $("#count_For_Like" + messageID).html(C + 1);
+                    $(this).addClass("heartAnimation").attr("rel", "unlike");
+
+                }
+                else {
+                    $("#count_For_Like" + messageID).html(C - 1);
+                    $(this).removeClass("heartAnimation").attr("rel", "like");
+                    $(this).css("background-position", "left");
+                }
+            });
         });
     </script>
 
@@ -95,15 +114,31 @@
     <div class="container">
         <div>
             <div class="place-title">
-                <h1 class="title">서울 탐방</h1><br>
+                <h1 class="title">서울 탐방</h1><br>   
             </div>
             <div class="place-picture">
-                <img src="../images/name3.jpg" alt="Place-picture1" class="photo place-picture" width="595" ,
+                <!--<img src="../images/name3.jpg" alt="Place-picture1" class="photo place-picture" width="595" ,
                     height="400">
                 <img src="../images/name4.jpg" alt="Place-picture2" class="photo place-picture" width="300" ,
                     height="200">
                 <img src="../images/name5.jpg" alt="Place-picture3" class="photo place-picture3" width="300" ,
-                    height="200">
+                    height="200">-->
+                    
+                <div class="place-picture1">
+                    <div style="flex: 1;">
+                        <div style="margin-left: -5%;" class="heart_animation_Other" id="like" rel="like"></div>
+                    </div>
+                </div>
+                <div class="place-picture2">
+                    <div style="flex: 1;">
+                        <div style="margin-left: -5%;" class="heart_animation_Other" id="like" rel="like"></div>
+                    </div>
+                </div>
+                <div class="place-picture3">
+                    <div style="flex: 1;">
+                        <div style="margin-left: -5%;" class="heart_animation_Other" id="like" rel="like"></div>
+                    </div>
+                </div>
             </div>
         </div>
         <br>
