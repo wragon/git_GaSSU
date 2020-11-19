@@ -3,10 +3,11 @@
 
 <head>
     <meta name="viewport" content="width=device-width, initial-scale=1">
-    <title>myplaces</title>
+    <title>mainhome</title>
     <link rel="stylesheet" href="../css/grid.css">
     <link rel="stylesheet" href="../css/mainhome.css">
     <link rel="stylesheet" href="../css/header.css">
+    <link rel="stylesheet" href="../css/square-content.css">
     <link rel="stylesheet" href="../css/heart-twitter/style.css">
     <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100">
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
@@ -43,6 +44,33 @@
             });
         });
     </script>
+    <style>
+        .search-and-button{
+            text-align: center;
+            margin-top: 23%;
+        }
+
+        .searchline{
+            text-align: center; margin-top: 23%;
+        }
+
+        .go-button{
+            height: 40px;
+            width: 60px;
+        }
+
+        .image-T4{
+            width: 90%;
+            padding: 5%;
+        }
+
+        .sns-box{
+            margin-top: 40px; 
+            text-align: center; 
+            border: black 2px solid;
+        }
+
+    </style>
 </head>
 
 <body>
@@ -87,15 +115,17 @@
                 <i class="fas fa-bars"></i>
             </a>
         </div>
+
+
     </nav>
 
     <div class="container">
         <div class="searchbox" style="width: 100%;">
             <div class="searchboxcontent">
-                <div style="text-align: center; margin-top: 23%;">
+                <div class="searchline">
                     <input onkeyup="filter()" type="text" id="value" placeholder="어디로 떠나볼까요?"
                         style="width: 50%; height: 30px;">
-                    <button style="height: 40px; width: 60px;"><b>Go!</b></button>
+                    <button class="go-button"><b>Go!</b></button>
                 </div>
             </div>
         </div>
@@ -111,16 +141,16 @@
         <div class="row">
 
             <div class="col-3">
-                <img src="../images/travelplace.jpg" style="width: 90%; padding: 5%;">
+                <img src="../images/travelplace.jpg" class="image-T4">
             </div>
             <div class="col-3">
-                <img src="../images/travelplace.jpg" style="width: 90%; padding: 5%;">
+                <img src="../images/travelplace.jpg" class="image-T4">
             </div>
             <div class="col-3">
-                <img src="../images/travelplace.jpg" style="width: 90%; padding: 5%;">
+                <img src="../images/travelplace.jpg" class="image-T4">
             </div>
             <div class="col-3">
-                <img src="../images/travelplace.jpg" style="width: 90%; padding: 5%;">
+                <img src="../images/travelplace.jpg" class="image-T4">
             </div>
         </div>
 
@@ -132,69 +162,71 @@
             </div>
         </div>
 
-        <div style="margin-top: 40px; text-align: center; border: black 2px solid;" class="container">
-            <div class="square" style="position: relative; display: inline-block;">
+        <div class="container sns-box">
+            
+            <div class="square">
                 <div class="content">
                     <div style="height: 90%;">
-                        <img src="../images/2.jpg" class="picture">
+                        <img src="../images/2.jpg" class="image-on-square">
                     </div>
                     <div class="heart-txt">
                         <div style="flex:1;">
                             <div class="heart_animation_Class " id="like" rel="like"></div>
                         </div>
                         <div style=" flex:8">
-                            <p style="display: table-cell; vertical-align:middle;">장소에대한설명들</p>
+                            <!--<p class="explain">장소에대한설명들</p> -->
+                            <p class="explain">text</p>
                         </div>
                     </div>
 
                 </div>
             </div>
 
-            <div class="square" style="position: relative; display: inline-block;">
+            <div class="square">
                 <div class="content">
                     <div style="height: 90%;">
-                        <img src="../images/2.jpg" class="picture">
+                        <img src="../images/2.jpg" class="image-on-square">
                     </div>
                     <div class="heart-txt">
                         <div style="flex:1">
                             <div class="heart_animation_Class " id="like" rel="like"></div>
                         </div>
                         <div style=" flex:8">
-                            <p style="display: table-cell; vertical-align:middle;">장소에대한설명들</p>
+                            <p class="explain">txt</p>
                         </div>
                     </div>
 
                 </div>
             </div>
 
-            <div class="square" style="position: relative; display: inline-block;">
+            <div class="square">
                 <div class="content">
                     <div style="height: 90%;">
-                        <img src="../images/2.jpg" class="picture">
+                        <img src="../images/2.jpg" class="image-on-square">
                     </div>
                     <div class="heart-txt">
                         <div style="flex:1">
                             <div class="heart_animation_Class " id="like" rel="like"></div>
                         </div>
                         <div style=" flex:8">
-                            <p style="display: table-cell; vertical-align:middle;">장소에대한설명들</p>
+                            <p class="explain">txt</p>
                         </div>
                     </div>
 
                 </div>
             </div>
 
-            <div class="square" style="position: relative; display: inline-block;">
+            <div class="square">
                 <div class="content">
                     <div style="height: 90%;">
-                        <img src="../images/2.jpg" class="picture">
+                        <img src="../images/2.jpg" class="image-on-square">
                     </div>
                     <div class="heart-txt">
                         <div style="flex:1">
                             <div class="heart_animation_Class " id="like" rel="like"></div>
                         </div>
                         <div style=" flex:8">
-                            <p style="display: table-cell; vertical-align:middle;">장소에대한설명들</p>
+                            <p class="explain">txt</p>
                         </div>
                     </div>
 
