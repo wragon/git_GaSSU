@@ -184,34 +184,39 @@ body .twitter svg {
   fill: #1da1f2;
 }
 
-
-  
-.container {
-  width: 100%;
-  max-width: 900px;
-  margin: auto;
-  padding: 30px 0 50px 0;
-}
-.square {
-  margin-left: 2%;
-  margin-right: 2%;
-  margin-bottom: 50px;
-  position: relative;
-  width: 405px;
-  height: 495px;
+.container{
+  margin-top: 120px;
 }
 
-.content { 
-  border-radius: 15px;
-  padding: 25px;
-  margin-top: 5px;
-  height: auto;
-  top: 50%;
-  right: 0;
-  bottom: 0;
-  left: 0;
-  background-color: #F6F8FF;
+.nav-and-searchbox{
+  position: fixed;
+  z-index: 1;
+  background-color: #ffffff;
+  top: 0; 
+  height: auto; 
+  width: 100%; 
+  text-align: center;
 }
+
+.searchbox{
+  margin: 10px 0;
+}
+
+.go-button{
+  height: 30px;
+  width: 60px; 
+  margin-right: 5px;
+}
+
+.explain{
+  display: table-cell;
+  vertical-align:middle;
+}
+
+.container-sns{
+  margin-top: 120px;
+}
+
 
 /*중간넓이*/
 
