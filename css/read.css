@@ -76,6 +76,13 @@
       margin-right: 70px;
   }
 
+  .container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 0 50px 0;
+  }
+
   /*중간넓이*/
   
   @media screen and (min-width: 620px) {
