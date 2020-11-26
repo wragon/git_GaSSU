@@ -1,0 +1,86 @@
+/*양 옆 여백*/
+.container {
+    width: 100%;
+    max-width: 900px;
+    margin: auto;
+    padding: 30px 0 30px 0;
+  }  
+
+  /*place*/
+  .place-title{
+    height: 165px;
+  }
+  .title{
+    font-size: 60px;
+    float:left;
+  }
+  .place-picture1{
+    float:left;
+    background-image: url('../images/name3.jpg');
+    background-position: center;
+    width:590px;
+    height:400px;
+    margin-left: 1px;
+    position: relative;
+  }
+  .place-picture2{
+    float:right;
+    background-image: url('../images/name4.jpg');
+    background-position: center;
+    width:306px;
+    height:198px;
+    position: relative;
+  }
+  .place-picture3{
+    float:right;
+    margin-top: 4px;
+    background-image: url('../images/name5.jpg');
+    background-position: center;
+    width:306px;
+    height:198px;
+    position: relative;
+  }
+
+  /*명소*/
+  .title2{
+    font-size: 45px;
+    text-align: center;
+  }
+  .good-place{
+    width: 450px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    height: auto;
+    float:left;
+    /* background-color: cadetblue; */
+  }
+  /*장소*/
+  .food-place{
+    width: 450px;
+    padding-top: 50px;
+    padding-bottom: 100px;
+    float:left;
+    /* background-color: cyan; */
+  }
+
+  /*테두리(sns.css)*/
+  .square_jy {
+    margin-left: 5%;
+    margin-right: 2%;
+    position: relative;
+    width: 400px;
+    height: 225px;
+  }
+  
+  .content_jy { 
+    width: 400px;
+    height: 225px;
+    border-radius: 15px;
+    height: auto;
+    background-color: #F6F8FF;
+  }
+
+  /*마지막*/
+  .finish{
+    text-align: center;
+  }

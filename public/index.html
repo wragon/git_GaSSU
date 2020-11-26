@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="ko">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>mainhome</title>
+    <link rel="stylesheet" href="./css/grid.css" type="text/css">
+    <link rel="stylesheet" href="./css/mainhome.css" type="text/css">
+    <link rel="stylesheet" href="./css/header.css" type="text/css">
+    <link rel="stylesheet" href="./css/square-content.css" type="text/css">
+    <link rel="stylesheet" href="./css/heart-twitter/style.css" type="text/css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css" type="text/css">
+    <script src="main.js" defer></script>
+    <script src="../css/heart-twitter/js_code.js"></script>
+    <script src="https://kit.fontawesome.com/5814eb1b1f.js" crossorigin="anonymous"></script>
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id"
+        content="281467534903-0u5uv24suvn9c2kr8e3ahonjm7qtlq3a.apps.googleusercontent.com">
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script>
+        $(document).ready(function () {
+
+            $('body').on("click", '.heart_animation_Class', function () {
+                var A = $(this).attr("id");
+                var B = A.split("like");
+                var messageID = B[1];
+                var C = parseInt($("#count_For_Like" + messageID).html());
+                $(this).css("background-position", "")
+                var D = $(this).attr("rel");
+
+                if (D === 'like') {
+                    $("#count_For_Like" + messageID).html(C + 1);
+                    $(this).addClass("heartAnimation").attr("rel", "unlike");
+
+                }
+                else {
+                    $("#count_For_Like" + messageID).html(C - 1);
+                    $(this).removeClass("heartAnimation").attr("rel", "like");
+                    $(this).css("background-position", "left");
+                }
+            });
+        });
+    </script>
+    <style>
+        
+
+    </style>
+</head>
+
+<body>
+
+    <nav class="navbar">
+        <div style="display: flex; justify-content: center; align-items: center;">
+            <div class="navbar_logo" style="margin-right: 50px;" >
+                <i class="fas fa-paper-plane"></i>
+                <a class="name" href="">GaSSU</a>
+            </div>
+
+            <ul class="navbar_menu">
+                <li><a href="map_place.html">Place</a></li>
+                <li><a href="sns.html">Social</a></li>
+                <li><a href="map_route.html">Route</a></li>
+                <li><a href="myPage.html">MyPage</a></li>
+            </ul>
+
+            <ul class="navbar_icons">
+                <li><i class="fab fa-facebook"></i></li>
+                <li><i class="fab fa-instagram"></i></li>
+                <div style="height: 36%; margin-left: 350px;" class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+                <script>
+                    function onSignIn(googleUser) {
+                        // Useful data for your client-side scripts:
+                        var profile = googleUser.getBasicProfile();
+                        console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+                        console.log('Full Name: ' + profile.getName());
+                        console.log('Given Name: ' + profile.getGivenName());
+                        console.log('Family Name: ' + profile.getFamilyName());
+                        console.log("Image URL: " + profile.getImageUrl());
+                        console.log("Email: " + profile.getEmail());
+
+                        // The ID token you need to pass to your backend:
+                        var id_token = googleUser.getAuthResponse().id_token;
+                        console.log("ID Token: " + id_token);
+                    }
+                </script>
+            </ul>
+
+            <a href="#" class="navbar_toogleBtn">
+                <i class="fas fa-bars"></i>
+            </a>
+        </div>
+
+
+    </nav>
+
+    <div class="container">
+        <div class="searchbox" style="width: 100%;">
+            <div class="searchboxcontent">
+                <div class="searchline">
+                    <input onkeyup="filter()" type="text" id="value" placeholder="어디로 떠나볼까요?"
+                        style="width: 50%; height: 30px;">
+                    <button class="go-button"><b>Go!</b></button>
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div>
+                <p>
+                <h2> Top 4 </h2>
+                </p>
+            </div>
+        </div>
+
+        <div class="row">
+
+            <div class="col-3">
+                <img src="./images/travelplace.jpg" class="image-T4">
+            </div>
+            <div class="col-3">
+                <img src="./images/travelplace.jpg" class="image-T4">
+            </div>
+            <div class="col-3">
+                <img src="./images/travelplace.jpg" class="image-T4">
+            </div>
+            <div class="col-3">
+                <img src="./images/travelplace.jpg" class="image-T4">
+            </div>
+        </div>
+
+        <div class="row">
+            <div>
+                <p>
+                <h2>SNS</h2>
+                </p>
+            </div>
+        </div>
+
+        <div class="container sns-box">
+            
+            <div class="square">
+                <div class="content">
+                    <div style="height: 90%;">
+                        <img src="./images/2.jpg" class="image-on-square">
+                    </div>
+                    <div class="heart-txt">
+                        <div style="flex:1;">
+                            <div style="margin-left: -6%; margin-top: -16%;" class="heart_animation_Class" id="like" rel="like"></div>
+                        </div>
+                        <div style=" flex:8">
+                            <p class="explain">text</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="square">
+                <div class="content">
+                    <div style="height: 90%;">
+                        <img src="./images/2.jpg" class="image-on-square">
+                    </div>
+                    <div class="heart-txt">
+                        <div style="flex:1;">
+                            <div style="margin-left: -6%; margin-top: -16%;" class="heart_animation_Class" id="like" rel="like"></div>
+                        </div>
+                        <div style=" flex:8">
+                            <p class="explain">text</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="square">
+                <div class="content">
+                    <div style="height: 90%;">
+                        <img src="./images/2.jpg" class="image-on-square">
+                    </div>
+                    <div class="heart-txt">
+                        <div style="flex:1;">
+                            <div style="margin-left: -6%; margin-top: -16%;" class="heart_animation_Class" id="like" rel="like"></div>
+                        </div>
+                        <div style=" flex:8">
+                            <p class="explain">text</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="square">
+                <div class="content">
+                    <div style="height: 90%;">
+                        <img src="./images/2.jpg" class="image-on-square">
+                    </div>
+                    <div class="heart-txt">
+                        <div style="flex:1;">
+                            <div style="margin-left: -6%; margin-top: -16%;" class="heart_animation_Class" id="like" rel="like"></div>
+                        </div>
+                        <div style=" flex:8">
+                            <p class="explain">text</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+
+
+        </div>
+
+
+
+    </div> <!-- container close-->
+
+
+    <!-- Footer -->
+    <footer>
+        <p>&copy; 2020 Kim HyeBin</p>
+    </footer>
+
+</body>
+
+</html>

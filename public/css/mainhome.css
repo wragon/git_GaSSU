@@ -1,0 +1,84 @@
+/***** FONT SETTINGS ******/
+.searchbox {
+  position: relative;
+  width: 100% /*이미지랑 서치박스크기*/
+}
+
+.searchbox:before {
+  content: "";
+  display: block;
+  padding-top: 50%; /*가로에 대한 세로의 비율*/
+  background-image: url('../images/travelplace.jpg');
+  background-repeat : no-repeat;
+	background-size : cover;
+
+}
+
+.searchboxcontent {
+  position: absolute;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
+}
+
+.deepblue {
+  background-color: #263343;
+}
+
+.mint {
+  background-color: #31BFBF;
+}
+
+.search-and-button{
+  text-align: center;
+  margin-top: 23%;
+}
+
+.searchline{
+  text-align: center; margin-top: 23%;
+}
+
+.go-button{
+  height: 40px;
+  width: 60px;
+}
+
+.image-T4{
+  width: 90%;
+  padding: 5%;
+}
+
+.sns-box{
+  margin-top: 40px; 
+  text-align: center; 
+  border: black 2px solid;
+}
+  
+  /*중간넓이*/
+  
+  @media screen and (min-width: 620px) {
+
+    .picture {
+        width: 350px; 
+        height: 350px;        
+    }
+    
+    .heart-txt {
+        padding-top: 15px; 
+        width: 350px; 
+        height: 90px; 
+        display: table; 
+        overflow: hidden;  
+        display: flex;
+    }
+
+  }
+  
+  
+  /*넓을때*/
+  
+  @media screen and (min-width: 768px) {
+    
+  }
+  

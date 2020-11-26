@@ -1,0 +1,267 @@
+.heart-switch {
+  --duration: .45s;
+  --stroke: #D1D6EE;
+  --stroke-active: #ec4472;
+  --fill: #fff;
+  --fill-active: #ec638e;
+  --shadow: rgba(0, 9, 61, 0.25);
+  cursor: pointer;
+  position: absolute;
+  -webkit-transform: scale(var(--s, 1)) translateZ(0);
+          transform: scale(var(--s, 1)) translateZ(0);
+  -webkit-transition: -webkit-transform .2s;
+  transition: -webkit-transform .2s;
+  transition: transform .2s;
+  transition: transform .2s, -webkit-transform .2s;
+  -webkit-tap-highlight-color: transparent;
+}
+.heart-switch:active {
+  --s: .95;
+}
+.heart-switch input {
+  -webkit-appearance: none;
+  -moz-appearance: none;
+  position: absolute;
+  outline: none;
+  border: none;
+  pointer-events: none;
+  z-index: 1;
+  margin: 0;
+  padding: 0;
+  left: 1px;
+  top: 1px;
+  width: 18px;
+  height: 18px;
+  border-radius: 50%;
+  background: #fff;
+  box-shadow: 0 1px 3px 0 var(--shadow);
+}
+.heart-switch input + svg {
+  width: 36px;
+  height: 25px;
+  fill: var(--fill);
+  stroke: var(--stroke);
+  stroke-width: 1px;
+  stroke-linejoin: round;
+  display: block;
+  -webkit-transition: stroke var(--duration), fill var(--duration);
+  transition: stroke var(--duration), fill var(--duration);
+}
+.heart-switch input:not(:checked) {
+  -webkit-animation: uncheck var(--duration) linear forwards;
+          animation: uncheck var(--duration) linear forwards;
+}
+.heart-switch input:checked {
+  -webkit-animation: check var(--duration) linear forwards;
+          animation: check var(--duration) linear forwards;
+}
+.heart-switch input:checked + svg {
+  --fill: var(--fill-active);
+  --stroke: var(--stroke-active);
+}
+
+@-webkit-keyframes uncheck {
+  0% {
+    -webkit-transform: rotate(-30deg) translateX(13.5px) translateY(8px);
+            transform: rotate(-30deg) translateX(13.5px) translateY(8px);
+  }
+  50% {
+    -webkit-transform: rotate(30deg) translateX(9px);
+            transform: rotate(30deg) translateX(9px);
+  }
+  75% {
+    -webkit-transform: rotate(30deg) translateX(4.5px) scaleX(1.1);
+            transform: rotate(30deg) translateX(4.5px) scaleX(1.1);
+  }
+  100% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+}
+
+@keyframes uncheck {
+  0% {
+    -webkit-transform: rotate(-30deg) translateX(13.5px) translateY(8px);
+            transform: rotate(-30deg) translateX(13.5px) translateY(8px);
+  }
+  50% {
+    -webkit-transform: rotate(30deg) translateX(9px);
+            transform: rotate(30deg) translateX(9px);
+  }
+  75% {
+    -webkit-transform: rotate(30deg) translateX(4.5px) scaleX(1.1);
+            transform: rotate(30deg) translateX(4.5px) scaleX(1.1);
+  }
+  100% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+}
+@-webkit-keyframes check {
+  0% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  25% {
+    -webkit-transform: rotate(30deg) translateX(4.5px) scaleX(1.1);
+            transform: rotate(30deg) translateX(4.5px) scaleX(1.1);
+  }
+  50% {
+    -webkit-transform: rotate(30deg) translateX(9px);
+            transform: rotate(30deg) translateX(9px);
+  }
+  100% {
+    -webkit-transform: rotate(-30deg) translateX(13.5px) translateY(8px);
+            transform: rotate(-30deg) translateX(13.5px) translateY(8px);
+  }
+}
+@keyframes check {
+  0% {
+    -webkit-transform: rotate(30deg);
+            transform: rotate(30deg);
+  }
+  25% {
+    -webkit-transform: rotate(30deg) translateX(4.5px) scaleX(1.1);
+            transform: rotate(30deg) translateX(4.5px) scaleX(1.1);
+  }
+  50% {
+    -webkit-transform: rotate(30deg) translateX(9px);
+            transform: rotate(30deg) translateX(9px);
+  }
+  100% {
+    -webkit-transform: rotate(-30deg) translateX(13.5px) translateY(8px);
+            transform: rotate(-30deg) translateX(13.5px) translateY(8px);
+  }
+}
+html {
+  box-sizing: border-box;
+  -webkit-font-smoothing: antialiased;
+}
+
+* {
+  box-sizing: inherit;
+}
+*:before, *:after {
+  box-sizing: inherit;
+}
+
+body {
+  min-height: 100vh;
+  display: -webkit-box;
+  display: flex;
+  font-family: 'Roboto', Arial;
+  -webkit-box-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+          flex-direction: column;
+  background: white;
+}
+body .heart-switch {
+  margin: 3px 0;
+}
+body .dribbble {
+  position: fixed;
+  display: block;
+  right: 20px;
+  bottom: 20px;
+}
+body .dribbble img {
+  display: block;
+  height: 28px;
+}
+body .twitter {
+  position: fixed;
+  display: block;
+  right: 64px;
+  bottom: 14px;
+}
+body .twitter svg {
+  width: 32px;
+  height: 32px;
+  fill: #1da1f2;
+}
+
+.container{
+  margin-top: 120px;
+}
+
+.nav-and-searchbox{
+  position: fixed;
+  z-index: 1;
+  background-color: #ffffff;
+  top: 0; 
+  height: auto; 
+  width: 100%; 
+  text-align: center;
+}
+
+.searchbox{
+  margin: 10px 0;
+}
+
+.go-button{
+  height: 30px;
+  width: 60px; 
+  margin-right: 5px;
+}
+
+.explain{
+  display: table-cell;
+  vertical-align:middle;
+}
+
+.container-sns{
+  margin-top: 120px;
+}
+
+.btn-floating {
+  position: fixed;
+  z-index: 1;
+  bottom:5%;
+	right:140px;
+  color: #fff;
+  padding: 0;
+  width: 50px; height: 50px;
+  display: inline-block;
+  outline: 0;
+  border: none;
+  text-decoration: none;
+  background: #2196F3;
+  text-align: center;
+  border-radius: 50%;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.16), 0 2px 10px 0 rgba(0, 0, 0, 0.12);
+}
+.btn-floating:hover {
+  background: #42A5F5;
+}
+.btn-floating div {
+  font-size: 1.3em;
+  padding: 0;
+  margin: .52em 0 0 0;
+}
+
+
+/*중간넓이*/
+
+@media screen and (min-width: 620px) {
+
+  
+}
+
+
+/*넓을때*/
+
+@media screen and (min-width: 760px) {
+
+  
+  
+}
+
+@media screen and (min-width: 1020px) {
+
+  
+  
+}

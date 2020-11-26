@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id"
+        content="281467534903-0u5uv24suvn9c2kr8e3ahonjm7qtlq3a.apps.googleusercontent.com">
+    
+    <title>read</title>
+    <link rel="stylesheet" href="./css/read.css">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/mainhome.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/heart-twitter/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="main.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/5814eb1b1f.js" crossorigin="anonymous"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    
+  </head>
+
+  <body>
+
+    <nav class="navbar">
+        <div class="navbar_logo" style="margin-right: 50px;" >
+            <i class="fas fa-paper-plane"></i>
+            <a class="name" href="index.html">GaSSU</a>
+        </div>
+        <ul class="navbar_menu">
+            <li><a href="map_place.html">Place</a></li>
+                <li><a href="sns.html">Social</a></li>
+                <li><a href="map_route.html">Route</a></li>
+                <li><a href="myPage.html">MyPage</a></li>
+      </ul>
+  
+      <ul class="navbar_icons">
+          <li><i class="fab fa-facebook"></i></li>
+          <li><i class="fab fa-instagram"></i></li>
+          <div style="height: 36%; margin-left: 350px;" class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+          <script>
+              function onSignIn(googleUser) {
+                  // Useful data for your client-side scripts:
+                  var profile = googleUser.getBasicProfile();
+                  console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+                  console.log('Full Name: ' + profile.getName());
+                  console.log('Given Name: ' + profile.getGivenName());
+                  console.log('Family Name: ' + profile.getFamilyName());
+                  console.log("Image URL: " + profile.getImageUrl());
+                  console.log("Email: " + profile.getEmail());
+  
+                  // The ID token you need to pass to your backend:
+                  var id_token = googleUser.getAuthResponse().id_token;
+                  console.log("ID Token: " + id_token);
+              }
+          </script>
+      </ul>
+  
+        <a href="#" class="navbar_toogleBtn">
+            <i class="fas fa-bars"></i>
+        </a>
+  
+    </nav>
+
+    <div class="container">
+
+        <div class="left-side">
+
+            <div class="slide">
+                <img id="back" src="./images/back.png" alt="" width="100">
+                <ul>
+                    <li><img src="./images/name1.jpg" alt="" class="image-onslide"></li>
+                    <li><img src="./images/name2.jpg" alt="" class="image-onslide"></li>
+                    <li><img src="./images/name3.jpg" alt="" class="image-onslide"></li>
+                    <li><img src="./images/name4.jpg" alt="" class="image-onslide"></li>
+                    <li><img src="./images/name5.jpg" alt="" class="image-onslide"></li>
+                </ul>
+                <img id="next" src="./images/next.png" alt="" width="100">
+                </div>
+        
+        
+                <div class="explain">
+                <p>
+                    서얼 며엉 <br> fdsf<br>sd<br>sf<br>esf<br>ezef<br>ezf<br><br><br><br><br><br>fasdfsadf<br>asfsfsdf<br><br><br><br><br><br><br><br><br><br><br><br>end<br><br><br>
+                </p>
+                </div>
+        
+                <script type="text/javascript">
+                    $(document).ready(function(){
+                        var imgs;
+                        var img_count;
+                        var img_position = 1;
+            
+                        imgs = $(".slide ul");
+                        img_count = imgs.children().length;
+            
+                        //버튼을 클릭했을 때 함수 실행
+                        $('#back').click(function () {
+                            back();
+                        });
+                        $('#next').click(function () {
+                            next();
+                        });
+            
+                        function back() {
+                            if(1<img_position){
+                            imgs.animate({
+                                left:'+=300px'
+                            });
+                            img_position--;
+                            }
+                        }
+                        function next() {
+                            if(img_count>img_position){
+                            imgs.animate({
+                                left:'-=300px'
+                            });
+                            img_position++;
+                            }
+                        }
+                    });
+                </script>
+        
+        </div>
+        
+        <div class="right-side">
+            <div class="title-of-mention">
+                <p style="font-size: xx-large;">댓글</p><br>
+            </div>
+            <div class="mention-box">
+                <div class="mention">
+                    <p>
+                        ID : 00000000
+                        <hr>
+                    </p>
+                </div>
+                <div class="mention">
+                    <p>
+                        ID : 00000000
+                        <hr>
+                    </p>
+                </div>
+                <div class="mention">
+                    <p>
+                        ID : 00000000
+                        <hr>
+                    </p>
+                </div>
+                <div class="mention">
+                    <p>
+                        ID : 00000000
+                        <hr>
+                    </p>
+                </div>
+                <div class="mention">
+                    <p>
+                        ID : 00000000
+                        <hr>
+                    </p>
+                </div>
+                <div class="mention">
+                    <p>
+                        ID : 00000000
+                        <hr>
+                    </p>
+                </div>
+                <div class="mention">
+                    <p>
+                        ID : 00000000
+                        <hr>
+                    </p>
+                </div>
+                <div class="mention">
+                    <p>
+                        ID : 00000000
+                        <hr>
+                    </p>
+                </div>
+
+            </div>
+            
+        </div>
+
+    </div> <!-- container close-->
+      
+
+      <!-- Footer -->
+      <footer style="text-align: center;">
+        <p>&copy; 2020 GaSSU</p>
+      </footer>
+
+  </body>
+
+</html>
