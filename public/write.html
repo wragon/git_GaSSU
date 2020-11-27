@@ -37,9 +37,9 @@
           <a class="name" href="index.html">GaSSU</a>
       </div>
       <ul class="navbar_menu">
-        <li><a href="map_place.html">Place</a></li>
-        <li><a href="sns.html">Social</a></li>
-        <li><a href="map_route.html">Route</a></li>
+        <li><a href="place.html">Place</a></li>
+        <li><a href="social.html">Social</a></li>
+        <li><a href="route.html">Route</a></li>
         <li><a href="myPage.html">MyPage</a></li>
     </ul>
 
@@ -88,15 +88,15 @@
 
         <form method="post" action="" onsubmit="return confirm('포스팅을 완료하시겠습니까?');" style="text-align: center;"> <!-- action 에 서버주소 입력 -->
             제목 :
-            <input type="text" name="post-name" style="width: 80%;" required>
+            <input type="text" name="post_name" style="width: 80%;" required>
             <br>
             <hr>
             <div id="image_container"></div>
-            <input type="file" name="reviewImg" id="image" accept="image/png, image/jpeg" onchange="setThumbnail(event);" multiple required/>
+            <input type="file" name="post_image" id="image" accept="image/png, image/jpeg" onchange="setThumbnail(event);" multiple required/>
             <br>
             <hr>
             
-            <textarea id="box" name="box" placeholder="장소에 대한 설명을 입력해주세요." class="text-input-area" required></textarea>
+            <textarea id="box" name="post_desc" placeholder="장소에 대한 설명을 입력해주세요." class="text-input-area" required></textarea>
             <hr>
             <br>
             <input type="submit" value="포스팅하기">
