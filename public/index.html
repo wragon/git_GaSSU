@@ -20,34 +20,7 @@
     <meta name="google-signin-client_id"
         content="281467534903-0u5uv24suvn9c2kr8e3ahonjm7qtlq3a.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
-    <script>
-        $(document).ready(function () {
 
-            $('body').on("click", '.heart_animation_Class', function () {
-                var A = $(this).attr("id");
-                var B = A.split("like");
-                var messageID = B[1];
-                var C = parseInt($("#count_For_Like" + messageID).html());
-                $(this).css("background-position", "")
-                var D = $(this).attr("rel");
-
-                if (D === 'like') {
-                    $("#count_For_Like" + messageID).html(C + 1);
-                    $(this).addClass("heartAnimation").attr("rel", "unlike");
-
-                }
-                else {
-                    $("#count_For_Like" + messageID).html(C - 1);
-                    $(this).removeClass("heartAnimation").attr("rel", "like");
-                    $(this).css("background-position", "left");
-                }
-            });
-        });
-    </script>
-    <style>
-        
-
-    </style>
 </head>
 
 <body>
@@ -109,14 +82,11 @@
 
         <div class="row">
             <div>
-                <p>
                 <h2> Top 4 </h2>
-                </p>
             </div>
         </div>
 
         <div class="row">
-
             <div class="col-3">
                 <img src="./images/travelplace.jpg" class="image-T4">
             </div>
@@ -131,7 +101,7 @@
             </div>
         </div>
 
-        <div class="row">
+        <!-- <div class="row">
             <div>
                 <p>
                 <h2>SNS</h2>
@@ -207,7 +177,7 @@
 
 
 
-        </div>
+        </div> -->
 
 
 
