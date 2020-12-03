@@ -15,32 +15,11 @@
     <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
     <script src="main.js" defer></script>
+    <script src="login.js"></script>
     <script src="./css/heart-twitter/js_code.js"></script>
     <script src="https://apis.google.com/js/platform.js" async defer></script>
     <script src="https://kit.fontawesome.com/5814eb1b1f.js" crossorigin="anonymous"></script> 
     <!-- <script>
-        $(document).ready(function () {
-
-            $('body').on("click", '.heart_animation_Class', function () {
-                var A = $(this).attr("id");
-                var B = A.split("like");
-                var messageID = B[1];
-                var C = parseInt($("#count_For_Like" + messageID).html());
-                $(this).css("background-position", "")
-                var D = $(this).attr("rel");
-
-                if (D === 'like') {
-                    $("#count_For_Like" + messageID).html(C + 1);
-                    $(this).addClass("heartAnimation").attr("rel", "unlike");
-
-                }
-                else {
-                    $("#count_For_Like" + messageID).html(C - 1);
-                    $(this).removeClass("heartAnimation").attr("rel", "like");
-                    $(this).css("background-position", "left");
-                }
-            });
-        });
     </script> -->
     <style>
         
@@ -66,7 +45,7 @@
                 <li><i class="fab fa-facebook"></i></li>
                 <li><i class="fab fa-instagram"></i></li>
                 <div style="height: 36%; margin-left: 350px;" class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-                <script>
+                <!-- <script>
                     function onSignIn(googleUser) {
                         // Useful data for your client-side scripts:
                         var profile = googleUser.getBasicProfile();
@@ -81,7 +60,7 @@
                         var id_token = googleUser.getAuthResponse().id_token;
                         console.log("ID Token: " + id_token);
                     }
-                </script>
+                </script> -->
             </ul>
 
             <a href="#" class="navbar_toogleBtn">

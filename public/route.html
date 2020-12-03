@@ -15,6 +15,7 @@
     <meta name="google-signin-scope" content="profile email">
     <meta name="google-signin-client_id" content="281467534903-0u5uv24suvn9c2kr8e3ahonjm7qtlq3a.apps.googleusercontent.com">
     <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="login.js"></script>
 
     <!--목록순서바꾸기-->
     <link href="https://code.jquery.com/ui/1.12.1/themes/base/jquery-ui.css" rel="stylesheet" type="text/css" />
@@ -103,7 +104,7 @@
             <li><i class="fab fa-facebook"></i></li>
             <li><i class="fab fa-instagram"></i></li>
             <div style="height: 36%; margin-left: 350px;" class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-                <script>
+                <!-- <script>
                     function onSignIn(googleUser) {
                         // Useful data for your client-side scripts:
                         var profile = googleUser.getBasicProfile();
@@ -118,7 +119,7 @@
                         var id_token = googleUser.getAuthResponse().id_token;
                         console.log("ID Token: " + id_token);
                     }
-                </script>
+                </script> -->
         </ul>
 
         <a href="#" class="navbar_toogleBtn">
