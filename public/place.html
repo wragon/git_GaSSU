@@ -1,5 +1,6 @@
+
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ko">
 
 <head>
     <title>Place</title>
@@ -16,7 +17,6 @@
     <!-- heart -->
     <link rel="stylesheet" href="../css/heart-twitter/style.css">
     <script src="../css/heart-twitter/js_code.js"></script>
-    <script src="login.js"></script>
     <script>
         $(document).ready(function () {
 
@@ -58,6 +58,10 @@
                     $(this).css("background-position", "left");
                 }
             });
+
+            function searchParam(key) {
+                return new URLSearchParams(location.search).get(key);
+            };
         });
     </script>
 
@@ -88,7 +92,7 @@
                 <li><i class="fab fa-facebook"></i></li>
                 <li><i class="fab fa-instagram"></i></li>
                 <div style="height: 36%; margin-left: 350px;" class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
-                <!-- <script>
+                <script>
                     function onSignIn(googleUser) {
                         // Useful data for your client-side scripts:
                         var profile = googleUser.getBasicProfile();
@@ -103,7 +107,7 @@
                         var id_token = googleUser.getAuthResponse().id_token;
                         console.log("ID Token: " + id_token);
                     }
-                </script> -->
+                </script>
             </ul>
 
             <a href="#" class="navbar_toogleBtn">
@@ -115,7 +119,18 @@
     <div class="container">
         <div>
             <div class="place-title">
-                <h1 class="title">서울 탐방</h1><br>   
+                <h1 class="title"><div id="place_name"></div></h1><br>   
+                <script>
+                    (function() {
+                        const URLSearch = new URLSearchParams(location.search);
+                        var place_name = URLSearch.get('keyword');
+                        console.log(place_name);
+                        if (place_name == null) {
+                            place_name = "서울";
+                        }
+                        $("#place_name").text(place_name + " 탐방");
+                    }());
+                </script>
             </div>
             <div class="place-picture">
                 <!--<img src="../images/name3.jpg" alt="Place-picture1" class="photo place-picture" width="595" ,
@@ -149,7 +164,7 @@
         <br>
         <br>
         <div class="good-place">
-            <h2 class="title2">볼거리</h2>
+            <h2 class="title2">명소</h2>
             <div class="square_jy" style="position: relative; display: inline-block;">
                 <div class="content_jy" style="display: flex; flex-direction: row;">
                     <div style="flex: 8; height: 225px; padding-left: 4%; padding-top: 2.5%;">
@@ -188,7 +203,7 @@
             </div>
         </div>
         <div class="food-place">
-            <h2 class="title2">먹거리</h2>
+            <h2 class="title2">장소</h2>
             <div class="square_jy" style="position: relative; display: inline-block;">
                 <div class="content_jy" style="display: flex; flex-direction: row;">
                     <div style="flex: 8; height: 225px; padding-left: 4%; padding-top: 2.5%;">
