@@ -1,0 +1,142 @@
+<!DOCTYPE html>
+<html lang="ko">
+  <head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta name="google-signin-scope" content="profile email">
+    <meta name="google-signin-client_id"
+        content="281467534903-0u5uv24suvn9c2kr8e3ahonjm7qtlq3a.apps.googleusercontent.com">
+    
+    <title>description</title>
+    <link rel="stylesheet" href="./css/place_desc.css">
+    <link rel="stylesheet" href="./css/grid.css">
+    <link rel="stylesheet" href="./css/mainhome.css">
+    <link rel="stylesheet" href="./css/header.css">
+    <link rel="stylesheet" href="./css/heart-twitter/style.css">
+    <link rel="stylesheet" href="http://fonts.googleapis.com/css?family=Roboto:400,100">
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:wght@600&display=swap">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="main.js" defer></script>
+    <script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+    <script src="https://kit.fontawesome.com/5814eb1b1f.js" crossorigin="anonymous"></script>
+    <script src="https://apis.google.com/js/platform.js" async defer></script>
+    <script src="login.js"></script>
+    
+  </head>
+
+  <body>
+
+    <nav class="navbar">
+        <div class="navbar_logo" style="margin-right: 50px;" >
+            <i class="fas fa-paper-plane"></i>
+            <a class="name" href="index.html">GaSSU</a>
+        </div>
+        <ul class="navbar_menu">
+            <li><a href="place.html">Place</a></li>
+            <li><a href="social.html">Social</a></li>
+            <li><a href="route.html">Route</a></li>
+            <li><a href="myPage.html">MyPage</a></li>
+      </ul>
+  
+      <ul class="navbar_icons">
+          <li><i class="fab fa-facebook"></i></li>
+          <li><i class="fab fa-instagram"></i></li>
+          <div style="height: 36%; margin-left: 350px;" class="g-signin2" data-onsuccess="onSignIn" data-theme="dark"></div>
+          <!-- <script>
+              function onSignIn(googleUser) {
+                  // Useful data for your client-side scripts:
+                  var profile = googleUser.getBasicProfile();
+                  console.log("ID: " + profile.getId()); // Don't send this directly to your server!
+                  console.log('Full Name: ' + profile.getName());
+                  console.log('Given Name: ' + profile.getGivenName());
+                  console.log('Family Name: ' + profile.getFamilyName());
+                  console.log("Image URL: " + profile.getImageUrl());
+                  console.log("Email: " + profile.getEmail());
+  
+                  // The ID token you need to pass to your backend:
+                  var id_token = googleUser.getAuthResponse().id_token;
+                  console.log("ID Token: " + id_token);
+              }
+          </script> -->
+      </ul>
+  
+        <a href="#" class="navbar_toogleBtn">
+            <i class="fas fa-bars"></i>
+        </a>
+  
+    </nav>
+
+    <div class="container">
+
+            <div class="slide">
+                <img id="back" src="./images/back.png" alt="" width="100">
+                <ul>
+                    <li><img src="./images/place2.jpg" alt="" class="image-onslide"></li>
+                    <li><img src="./images/name2.jpg" alt="" class="image-onslide"></li>
+                    <li><img src="./images/name3.jpg" alt="" class="image-onslide"></li>
+                    <li><img src="./images/name4.jpg" alt="" class="image-onslide"></li>
+                    <li><img src="./images/name5.jpg" alt="" class="image-onslide"></li>
+                </ul>
+                <img id="next" src="./images/next.png" alt="" width="100">
+            </div>
+        
+        
+            <div class="explain">
+                <p>
+                    <h4><b>보라매공원</b></h4>
+                    면적 40만 7529m2. 공군사관학교로 쓰여오다가 1985년 12월 서울시에서 인수,
+                     1986년 5월에 복지시설 위주의 시립공원으로 개원하였다. <br>
+                     주요 시설물로는 대운동장을 비롯하여
+                     잔디광장, 독서실, 청소년수련장, 소동물원, 체육관, 수영장, 장애자복지관, 남부노인종합복지관
+                     등이 있으며, 그 밖에 연못, 녹지, 산책로, 조깅코스 등이 마련되어 있다.<br><br>
+                     동작구, 관악구에 걸쳐있는 넓은 휴식공간으로, 인근의 시민들이 많이 이용한다.
+                </p>
+            </div>
+        
+            <script type="text/javascript">
+                $(document).ready(function(){
+                    var imgs;
+                    var img_count;
+                    var img_position = 1;
+        
+                    imgs = $(".slide ul");
+                    img_count = imgs.children().length;
+        
+                    //버튼을 클릭했을 때 함수 실행
+                    $('#back').click(function () {
+                        back();
+                    });
+                    $('#next').click(function () {
+                        next();
+                    });
+        
+                    function back() {
+                        if(1<img_position){
+                        imgs.animate({
+                            left:'+=300px'
+                        });
+                        img_position--;
+                        }
+                    }
+                    function next() {
+                        if(img_count>img_position){
+                        imgs.animate({
+                            left:'-=300px'
+                        });
+                        img_position++;
+                        }
+                    }
+                });
+            </script>
+
+    </div> <!-- container close-->
+      
+
+      <!-- Footer -->
+      <footer style="text-align: center;">
+        <p>&copy; 2020 GaSSU</p>
+      </footer>
+
+  </body>
+
+</html>

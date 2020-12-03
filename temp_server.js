@@ -95,7 +95,7 @@ app.post('/write.html', function (request, response) {
         else {
             console.log(rows.insertId); //중요함!!!!!!!!!!!!!!!!!!!!
             response.writeHead(200, { "Content-Type": "text/HTML; charset=utf-8" });
-            fs.createReadStream("./public/index.html", { encoding: null }).pipe(response);
+            fs.createReadStream("./public/social.html", { encoding: null }).pipe(response);
         }
     });
 });

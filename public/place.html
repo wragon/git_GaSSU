@@ -126,20 +126,13 @@
                         var place_name = URLSearch.get('keyword');
                         console.log(place_name);
                         if (place_name == null) {
-                            place_name = "서울";
+                            place_name = "동작구";
                         }
                         $("#place_name").text(place_name + " 탐방");
                     }());
                 </script>
             </div>
             <div class="place-picture">
-                <!--<img src="../images/name3.jpg" alt="Place-picture1" class="photo place-picture" width="595" ,
-                    height="400">
-                <img src="../images/name4.jpg" alt="Place-picture2" class="photo place-picture" width="300" ,
-                    height="200">
-                <img src="../images/name5.jpg" alt="Place-picture3" class="photo place-picture3" width="300" ,
-                    height="200">-->
-                    
                 <div class="place-picture1">
                     <div style="flex: 1;">
                         <div style="margin-left: -5%;" class="heart_animation_Other" id="like" rel="like"></div>
@@ -162,13 +155,26 @@
         <br>
         <br>
         <br>
-        <br>
+        <br>      
         <div class="good-place">
-            <h2 class="title2">명소</h2>
+            <h2 class="title2">볼거리</h2>
             <div class="square_jy" style="position: relative; display: inline-block;">
                 <div class="content_jy" style="display: flex; flex-direction: row;">
                     <div style="flex: 8; height: 225px; padding-left: 4%; padding-top: 2.5%;">
-                        <img src="../images/name1.jpg" style="width: 100%; height: 95%;">
+                        <img src="../images/place1.jpg" style="width: 100%; height: 95%;">
+                    </div>
+                    <div style="flex: 1;">
+                        <div style="margin-left: -5%;" class="heart_animation_Class" id="like" rel="like"></div>
+                    </div>
+                </div>
+            </div>
+            <br>
+            <br>
+            <br>
+            <div class="square_jy" style="position: relative; display: inline-block;">
+                <div class="content_jy" style="display: flex; flex-direction: row;">
+                    <div style="flex: 8; height: 225px; padding-left: 4%; padding-top: 2.5%;" OnClick="location.href ='./place_desc.html'">
+                        <img src="../images/place2.jpg" style="width: 100%; height: 95%;">
                     </div>
                     <div style="flex: 1;">
                         <div style="margin-left: -5%;" class="heart_animation_Class" id="like" rel="like"></div>
@@ -181,20 +187,7 @@
             <div class="square_jy" style="position: relative; display: inline-block;">
                 <div class="content_jy" style="display: flex; flex-direction: row;">
                     <div style="flex: 8; height: 225px; padding-left: 4%; padding-top: 2.5%;">
-                        <img src="../images/name1.jpg" style="width: 100%; height: 95%;">
-                    </div>
-                    <div style="flex: 1;">
-                        <div style="margin-left: -5%;" class="heart_animation_Class" id="like" rel="like"></div>
-                    </div>
-                </div>
-            </div>
-            <br>
-            <br>
-            <br>
-            <div class="square_jy" style="position: relative; display: inline-block;">
-                <div class="content_jy" style="display: flex; flex-direction: row;">
-                    <div style="flex: 8; height: 225px; padding-left: 4%; padding-top: 2.5%;">
-                        <img src="../images/name1.jpg" style="width: 100%; height: 95%;">
+                        <img src="../images/place3.jpg" style="width: 100%; height: 95%;">
                     </div>
                     <div style="flex: 1;">
                         <div style="margin-left: -5%;" class="heart_animation_Class" id="like" rel="like"></div>
@@ -203,11 +196,11 @@
             </div>
         </div>
         <div class="food-place">
-            <h2 class="title2">장소</h2>
+            <h2 class="title2">먹거리</h2>
             <div class="square_jy" style="position: relative; display: inline-block;">
                 <div class="content_jy" style="display: flex; flex-direction: row;">
                     <div style="flex: 8; height: 225px; padding-left: 4%; padding-top: 2.5%;">
-                        <img src="../images/name2.jpg" style="width: 100%; height: 95%;">
+                        <img src="../images/rest1.jpg" style="width: 100%; height: 95%;">
                     </div>
                     <div style="flex: 1;">
                         <div style="margin-left: -5%;" class="heart_animation_Class" id="like" rel="like"></div>
@@ -220,7 +213,7 @@
             <div class="square_jy" style="position: relative; display: inline-block;">
                 <div class="content_jy" style="display: flex; flex-direction: row;">
                     <div style="flex: 8; height: 225px; padding-left: 4%; padding-top: 2.5%;">
-                        <img src="../images/name2.jpg" style="width: 100%; height: 95%;">
+                        <img src="../images/rest2.jpg" style="width: 100%; height: 95%;">
                     </div>
                     <div style="flex: 1;">
                         <div style="margin-left: -5%;" class="heart_animation_Class" id="like" rel="like"></div>
@@ -233,7 +226,7 @@
             <div class="square_jy" style="position: relative; display: inline-block;">
                 <div class="content_jy" style="display: flex; flex-direction: row;">
                     <div style="flex: 8; height: 225px; padding-left: 4%; padding-top: 2.5%;">
-                        <img src="../images/name2.jpg" style="width: 100%; height: 95%;">
+                        <img src="../images/rest3.jpg" style="width: 100%; height: 95%;">
                     </div>
                     <div style="flex: 1;">
                         <div style="margin-left: -5%;" class="heart_animation_Class" id="like" rel="like"></div>
@@ -243,5 +236,4 @@
         </div>
     </div>
 </body>
-
 </html>

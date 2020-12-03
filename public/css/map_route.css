@@ -8,12 +8,12 @@
   .list{
     width: 50%;
     float:left;
-    background-color: cadetblue;
+    /* background-color: cadetblue; */
   }
   .map{
     width: 50%;
     float:left;
-    background-color:cyan;
+    /* background-color:cyan; */
   }
 
   .itemBox {

@@ -1,3 +1,4 @@
+
 /*양 옆 여백*/
 .container {
     width: 100%;
@@ -16,7 +17,7 @@
   }
   .place-picture1{
     float:left;
-    background-image: url('../images/name3.jpg');
+    background-image: url('../images/place2.jpg');
     background-position: center;
     width:590px;
     height:400px;
@@ -25,7 +26,7 @@
   }
   .place-picture2{
     float:right;
-    background-image: url('../images/name4.jpg');
+    background-image: url('../images/place1.jpg');
     background-position: center;
     width:306px;
     height:198px;
@@ -34,7 +35,7 @@
   .place-picture3{
     float:right;
     margin-top: 4px;
-    background-image: url('../images/name5.jpg');
+    background-image: url('../images/rest2.jpg');
     background-position: center;
     width:306px;
     height:198px;
